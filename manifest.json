@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Trucker Path Google Maps Link",
+  "version": "1.0",
+  "description": "Adds a Google Maps link to each row in the Trucker Path load board.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://command.truckerpath.com/load-board/search-loads"],
+      "js": ["content.js"]
+    }
+  ]
+}
